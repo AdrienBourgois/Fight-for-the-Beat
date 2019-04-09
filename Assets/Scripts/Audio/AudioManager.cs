@@ -14,15 +14,20 @@ namespace Audio
         [SerializeField]
         [EventRef]
         private string menuEvent = "";
-        private EventInstance menuEventInstance;
+
+        [SerializeField]
+        [EventRef]
+        private string musicEvent = "";
+
+        private EventInstance eventInstance;
 
         private int beat;
 
         public void SetMusicVolume(float _volume)
         {
             MusicVolume = _volume;
-            if (menuEventInstance.isValid())
-                menuEventInstance.setVolume(_volume);
+            if (eventInstance.isValid())
+                eventInstance.setVolume(_volume);
         }
 
         public void SetFxVolume(float _volume) => FxVolume = _volume;
@@ -34,13 +39,32 @@ namespace Audio
 
         private void Start()
         {
-            menuEventInstance = RuntimeManager.CreateInstance(menuEvent);
-            menuEventInstance.start();
+            GameManager.Instance.OnMenu += OnMenu;
+            GameManager.Instance.OnPlay += OnPlay;
+        }
+
+        private void OnPlay()
+        {
+            SetInstance(musicEvent);
+        }
+
+        private void OnMenu()
+        {
+            SetInstance(menuEvent);
+        }
+
+        private void SetInstance(string _event)
+        {
+            if(eventInstance.isValid())
+                eventInstance.release();
+
+            eventInstance = RuntimeManager.CreateInstance(_event);
+            eventInstance.start();
         }
 
         private void Update()
         {
-            menuEventInstance.getTimelinePosition(out int position);
+            eventInstance.getTimelinePosition(out int position);
             float time = position / 1000f;
             int total_beat = (int)(time / (60f / 120f));
             beat = total_beat % 4 + 1;
