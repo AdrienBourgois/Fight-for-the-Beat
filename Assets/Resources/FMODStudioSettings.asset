@@ -14,8 +14,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   HasSourceProject: 1
   HasPlatforms: 1
-  sourceProjectPath: 
-  SourceProjectPathUnformatted: 
+  sourceProjectPath: C:\Users\Adrien\Desktop\Tick\Tick.fspro
+  SourceProjectPathUnformatted: C:\Users\Adrien\Desktop\Tick\Tick.fspro
   SourceBankPathUnformatted: C:\Users\Adrien\Desktop\Tick\Build
   AutomaticEventLoading: 1
   AutomaticSampleLoading: 0
