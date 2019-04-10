@@ -10,10 +10,22 @@ public class GameManager : MonoBehaviour
     public event GameEvent OnPlay;
     public event GameEvent OnGameOver;
 
+    [SerializeField]
+    private bool startOnPlay = false;
+
     private void Awake()
     {
         Instance = this;
         DontDestroyOnLoad(gameObject);
+    }
+
+    private void Update()
+    {
+        if(startOnPlay)
+        {
+            OnPlay?.Invoke();
+            startOnPlay = false;
+        }
     }
 
     public void Play()
