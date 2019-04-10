@@ -24,6 +24,9 @@ namespace Entities
         protected Entity GetNextSpaceEntity() => SpaceManager.Instance.GetEntityOnSpace(EndSpaceIndex + 1);
         protected Entity GetPreviousSpaceEntity() => SpaceManager.Instance.GetEntityOnSpace(BeginSpaceIndex - 1);
 
+        protected Entity GetNextRelativeSpaceEntity(int _delta) => SpaceManager.Instance.GetEntityOnSpace(EndSpaceIndex + _delta);
+        protected Entity GetPreviousRelativeSpaceEntity(int _delta) => SpaceManager.Instance.GetEntityOnSpace(BeginSpaceIndex - _delta);
+
         public void Move(int _spaces)
         {
             BeginSpaceIndex += _spaces;
