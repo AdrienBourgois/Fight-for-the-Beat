@@ -412,5 +412,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d121780e08fdc204e8d548623ac81d32, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  menuEvent: event:/Tick
-  musicEvent: event:/Tick
+  menuEvent: event:/Main theme
+  musicEvent: event:/Main theme
