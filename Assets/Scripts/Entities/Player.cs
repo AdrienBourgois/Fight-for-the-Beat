@@ -13,14 +13,15 @@ namespace Entities
         private Sequence CurentSequence = null;
         private int CurentActionIndex;
 
-
         protected override void Start()
         {
             base.Start();
 
+            Life = 3;
+
             GameInputs.InputManager.Instance.OnKeyPressed += Controll;
 
-            GameInputs.InputManager.Instance.OnNoKeyPressed += () => { LaunchSequence(Idle); ExecuteSequence(); };
+            //GameInputs.InputManager.Instance.OnNoKeyPressed += () => { LaunchSequence(Idle); ExecuteSequence(); };
         }
 
         void Controll(GameInputs.InputManager.Keys key)
@@ -34,9 +35,6 @@ namespace Entities
                         LaunchSequence(MoveRight);
                     break;
                 case (GameInputs.InputManager.Keys.Left):
-                    if (GetPreviousSpaceEntity())
-                        LaunchSequence(Attack);
-                    else
                         LaunchSequence(MoveLeft);
                     break;
                 case (GameInputs.InputManager.Keys.Up):
@@ -77,6 +75,12 @@ namespace Entities
                     CurentActionIndex = 0;
                 }
             }
+            GameManager.Instance.PlayerPlayed();
+        }
+
+        override protected void OnDie()
+        {
+            gameObject.SetActive(false);
         }
     }
 }

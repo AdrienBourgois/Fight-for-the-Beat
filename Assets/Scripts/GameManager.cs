@@ -8,6 +8,7 @@ public class GameManager : MonoBehaviour
 
     public event GameEvent OnMenu;
     public event GameEvent OnPlay;
+    public event GameEvent OnPlayerPlayed;
     public event GameEvent OnGameOver;
 
     [SerializeField]
@@ -32,6 +33,11 @@ public class GameManager : MonoBehaviour
     {
         SceneManager.LoadScene(1);
         OnPlay?.Invoke();
+    }
+
+    public void PlayerPlayed()
+    {
+        OnPlayerPlayed?.Invoke();
     }
 
     public void Menu()

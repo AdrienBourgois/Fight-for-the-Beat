@@ -9,7 +9,6 @@ namespace Entities
     {
         public override void Execute(GameObject collector)
         {
-
         }
     }
 }

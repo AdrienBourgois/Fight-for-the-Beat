@@ -9,6 +9,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: eacb0bd25d40f294696dd9f7644c9566, type: 3}
-  m_Name: Attack
+  m_Script: {fileID: 11500000, guid: 9085d4f5cb551494c907a3d95e232175, type: 3}
+  m_Name: PrepareAttack_3
   m_EditorClassIdentifier: 
+  TrigerName: Prepare3

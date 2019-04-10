@@ -10,7 +10,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 7953242e5b63a3c43b650084dae4f7ac, type: 3}
-  m_Name: Move1SpaceRight
+  m_Name: Move_1Space_Left
   m_EditorClassIdentifier: 
-  Mouvement: {x: 1, y: 0}
-  Speed: 0
+  SpaceLenght: -1
+  Mouvement: {x: -1, y: 0}

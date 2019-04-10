@@ -7,12 +7,34 @@ namespace Entities
     [CreateAssetMenu(menuName = "Action/Attack")]
     public class Attack : Action
     {
+        public string TrigerName = "Attack";
+        public List<int> SpaceEffect;
+        public bool Dodgeable;
+
         public override void Execute(GameObject collector)
         {
+            Entity entity = collector.GetComponent<Entity>();
+            if (entity)
+            {
+                foreach(int space in SpaceEffect)
+                {
+                    if(space > 0)
+                    {
+                        Entity target = entity.GetNextRelativeSpaceEntity(space);
+                        target?.Hit(1);
+                    }
+                    else if (space < 0)
+                    {
+                        Entity target = entity.GetPreviousRelativeSpaceEntity(space * -1);
+                        target?.Hit(1);
+                    }
+                }
+            }
+
             Animator animator = collector.GetComponent<Animator>();
             if (animator)
             {
-                animator.SetTrigger("Attack");
+                animator.SetTrigger(TrigerName);
             }
         }
     }

@@ -1,0 +1,17 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b25c88d8a8de61241983e24bcc9b14ed, type: 3}
+  m_Name: EnemyMoveLeft
+  m_EditorClassIdentifier: 
+  Actions:
+  - {fileID: 11400000, guid: e107cad9d338fdf4890d86986d74e5ae, type: 2}
+  - {fileID: 11400000, guid: 1ce011e9b07aa574182cc8ff36e869c3, type: 2}

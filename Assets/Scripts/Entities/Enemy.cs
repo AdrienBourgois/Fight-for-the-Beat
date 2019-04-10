@@ -9,29 +9,43 @@ namespace Entities
         public Sequence MoveRight = null;
         public Sequence Attack = null;
         public Sequence AttackLow = null;
-        public Sequence PrepareAttack = null;
-        public Sequence PrepareAttackAttackLow = null;
+        public Sequence AttackDash = null;
 
         private Sequence CurentSequence = null;
         private int CurentActionIndex;
 
 
-        private void Update()
+
+        protected override void Start()
         {
-            if (CurentSequence == null)
-            {
+            base.Start();
 
+            Life = 2;
 
-
-            }
-            if (Input.GetButtonDown("Jump"))
-            {
-                ExecuteSequence();
-            }
+            GameManager.Instance.OnPlayerPlayed += Controll;
         }
+
+        void Controll()
+        {
+            if(GetPreviousSpaceEntity())
+            {
+                float rand = Random.Range(1, 2);
+                if(rand == 2)
+                    LaunchSequence(Attack);
+                else
+                    LaunchSequence(AttackLow);
+            }
+            else
+                LaunchSequence(MoveLeft);
+
+            ExecuteSequence();
+        }
+
 
         void LaunchSequence(Sequence sequence)
         {
+            if (CurentSequence) return;
+
             CurentSequence = sequence;
             CurentActionIndex = 0;
 
@@ -55,11 +69,11 @@ namespace Entities
                     CurentActionIndex = 0;
                 }
             }
-            else
-            {
-                LaunchSequence(Idle);
-                ExecuteSequence();
-            }
+        }
+
+        override protected void OnDie()
+        {
+            gameObject.SetActive(false);
         }
     }
 }

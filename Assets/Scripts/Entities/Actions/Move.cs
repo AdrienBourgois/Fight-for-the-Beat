@@ -10,7 +10,6 @@ namespace Entities
     {
         public int SpaceLenght;
         public Vector2 Mouvement;
-        //public float Speed;
 
         public override void Execute(GameObject collector)
         {
