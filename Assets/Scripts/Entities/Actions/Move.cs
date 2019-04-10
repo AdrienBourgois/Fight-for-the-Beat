@@ -16,7 +16,7 @@ namespace Entities
             CharacterController2D cc2D = collector.GetComponent<CharacterController2D>();
             if (cc2D)
             {
-                cc2D.MoveTo(Mouvement);
+                //cc2D.MoveTo(Mouvement);
             }
 
             Entity entity = collector.GetComponent<Entity>();

@@ -14,14 +14,14 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   EditorBanks:
   - {fileID: 114399341227282268}
-  - {fileID: 114371609069919142}
+  - {fileID: 114507999034275760}
   EditorEvents:
   - {fileID: 114784454018889570}
   MasterBanks:
-  - {fileID: 114371609069919142}
+  - {fileID: 114507999034275760}
   StringsBanks:
   - {fileID: 114399341227282268}
-  stringsBankWriteTime: 636905081219307187
+  stringsBankWriteTime: 636905084340880713
   cacheVersion: 3
 --- !u!114 &114066349694272018
 MonoBehaviour:
@@ -42,6 +42,22 @@ MonoBehaviour:
   - Name: 
     Value: 672
   Exists: 1
+--- !u!114 &114076055716021186
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Name: Main
+  Min: 0
+  Max: 3
+  Default: 3
 --- !u!114 &114096219221855356
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -94,7 +110,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Path: Assets\FmodBanks\Master Bank.strings.bank
-  lastModified: 636905081219307187
+  lastModified: 636905084340880713
   LoadResult: 0
   FileSizes:
   - Name: 
@@ -119,6 +135,25 @@ MonoBehaviour:
   FileSizes:
   - Name: 
     Value: 12474
+  Exists: 1
+--- !u!114 &114507999034275760
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Path: D:\Documents\Projects\Git\Fight-for-the-Beat\Assets\FmodBanks\Master Bank.bank
+  lastModified: 636905084341763870
+  LoadResult: 0
+  FileSizes:
+  - Name: 
+    Value: 11792896
   Exists: 1
 --- !u!114 &114534430648393140
 MonoBehaviour:
@@ -234,12 +269,12 @@ MonoBehaviour:
   Path: event:/Main theme
   guid: 1ed392bc1c68434bad0c14b01d25c4bd
   Banks:
-  - {fileID: 114371609069919142}
+  - {fileID: 114507999034275760}
   IsStream: 1
   Is3D: 0
   IsOneShot: 0
   Parameters:
-  - {fileID: 114812343847631442}
+  - {fileID: 114076055716021186}
   MinDistance: 0
   MaxDistance: 0
   Length: 74303
