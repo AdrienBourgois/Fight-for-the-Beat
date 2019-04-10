@@ -11,6 +11,13 @@ namespace Entities
         public int EndSpaceIndex { get; protected set; }
         public bool IsOnSpace(int _index) => _index >= BeginSpaceIndex && _index <= EndSpaceIndex;
 
+        public void SetSpaceIndex(int _index, int _size = 1)
+        {
+            BeginSpaceIndex = _index;
+            EndSpaceIndex = _index + _size;
+            gameObject.transform.position = Vector3.right * BeginSpaceIndex;
+        }
+
         protected virtual void Start()
         {
             SpaceManager.Instance.AddEntity(this);
