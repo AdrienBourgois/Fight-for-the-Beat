@@ -8,18 +8,25 @@ namespace Entities
     [CreateAssetMenu(menuName = "Action/Move")]
     public class Move : Action
     {
+        public int SpaceLenght;
         public Vector2 Mouvement;
-        public float Speed;
+        //public float Speed;
 
-        public override void Execute(GameObject entitie)
+        public override void Execute(GameObject collector)
         {
-            CharacterController2D cc2D = entitie.GetComponent<CharacterController2D>();
+            CharacterController2D cc2D = collector.GetComponent<CharacterController2D>();
             if (cc2D)
             {
                 cc2D.MoveTo(Mouvement);
             }
 
-            Animator animator = entitie.GetComponent<Animator>();
+            Entity entity = collector.GetComponent<Entity>();
+            if (entity)
+            {
+                entity.Move(SpaceLenght);
+            }
+
+            Animator animator = collector.GetComponent<Animator>();
             if (animator)
             {
                 animator.SetTrigger("Move");

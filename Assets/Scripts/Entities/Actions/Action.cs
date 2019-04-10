@@ -7,6 +7,6 @@ namespace Entities
 {
     public abstract class Action : ScriptableObject
     {
-        abstract public void Execute(GameObject entitie);
+        abstract public void Execute(GameObject collector);
     }
 }

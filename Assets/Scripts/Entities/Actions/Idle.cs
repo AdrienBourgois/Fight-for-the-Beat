@@ -7,13 +7,9 @@ namespace Entities
     [CreateAssetMenu(menuName = "Action/Idle")]
     public class Idle : Action
     {
-        public override void Execute(GameObject entitie)
+        public override void Execute(GameObject collector)
         {
-            Animator animator = entitie.GetComponent<Animator>();
-            if (animator)
-            {
-                animator.SetTrigger("Idle");
-            }
+
         }
     }
 }
