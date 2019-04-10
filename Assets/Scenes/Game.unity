@@ -123,6 +123,7 @@ GameObject:
   - component: {fileID: 568113312}
   - component: {fileID: 568113311}
   - component: {fileID: 568113313}
+  - component: {fileID: 568113314}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -202,6 +203,18 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: d92cc8e9c7ca75048b2f519a421a81e5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &568113314
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 568113310}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d0bb777d943032f4c80fb0dd5c3f37cd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1 &969791071
@@ -300,7 +313,10 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 990789779}
+  - component: {fileID: 990789781}
   - component: {fileID: 990789778}
+  - component: {fileID: 990789782}
+  - component: {fileID: 990789780}
   m_Layer: 0
   m_Name: Managers
   m_TagString: Untagged
@@ -334,3 +350,42 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &990789780
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 990789777}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d199a9ea4ab3c2d4a920044bb8ecbe07, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &990789781
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 990789777}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1d3407219630a314eb74867ddfa1cd30, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  startOnPlay: 1
+--- !u!114 &990789782
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 990789777}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d121780e08fdc204e8d548623ac81d32, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  menuEvent: event:/Tick
+  musicEvent: event:/Tick
