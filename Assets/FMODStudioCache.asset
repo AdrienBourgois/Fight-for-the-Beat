@@ -13,15 +13,15 @@ MonoBehaviour:
   m_Name: FMODStudioCache
   m_EditorClassIdentifier: 
   EditorBanks:
-  - {fileID: 114096219221855356}
-  - {fileID: 114577856208995046}
+  - {fileID: 114399341227282268}
+  - {fileID: 114371609069919142}
   EditorEvents:
-  - {fileID: 114576902380770334}
+  - {fileID: 114609407927311592}
   MasterBanks:
-  - {fileID: 114577856208995046}
+  - {fileID: 114371609069919142}
   StringsBanks:
-  - {fileID: 114096219221855356}
-  stringsBankWriteTime: 636904032548378536
+  - {fileID: 114399341227282268}
+  stringsBankWriteTime: 636905040310905523
   cacheVersion: 3
 --- !u!114 &114066349694272018
 MonoBehaviour:
@@ -55,13 +55,72 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Path: C:\Users\Adrien\Desktop\Tick\Build\Desktop\Master Bank.strings.bank
-  lastModified: 636904032548378536
+  lastModified: 636904941415285550
   LoadResult: 0
   FileSizes:
   - Name: Desktop
     Value: 714
+  Exists: 0
+--- !u!114 &114371609069919142
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Path: C:\Users\Adrien\Documents\Projects\Fight for the Beat\Assets\FmodBanks\Master
+    Bank.bank
+  lastModified: 636905040310875536
+  LoadResult: 0
+  FileSizes:
+  - Name: 
+    Value: 508256
+  Exists: 1
+--- !u!114 &114399341227282268
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Path: Assets\FmodBanks\Master Bank.strings.bank
+  lastModified: 636905040310905523
+  LoadResult: 0
+  FileSizes:
+  - Name: 
+    Value: 714
   Exists: 1
 --- !u!114 &114497868900419926
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Path: C:\Users\Adrien\Documents\Projects\Fight for the Beat\Assets\FmodBanks\Master
+    Bank.bank
+  lastModified: 636903400175280346
+  LoadResult: 0
+  FileSizes:
+  - Name: 
+    Value: 12474
+  Exists: 1
+--- !u!114 &114534430648393140
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -95,11 +154,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Path: event:/Tick
   guid: fd07928e305f7b4ab4bc8cb89c20de8b
-  Banks:
-  - {fileID: 114577856208995046}
+  Banks: []
   IsStream: 1
   Is3D: 0
-  IsOneShot: 1
+  IsOneShot: 0
   Parameters: []
   MinDistance: 0
   MaxDistance: 0
@@ -117,9 +175,51 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Path: C:\Users\Adrien\Desktop\Tick\Build\Desktop\Master Bank.bank
-  lastModified: 636904032548358552
+  lastModified: 636904941415255581
   LoadResult: 0
   FileSizes:
   - Name: Desktop
-    Value: 508128
+    Value: 508256
+  Exists: 0
+--- !u!114 &114609407927311592
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Path: event:/Tick
+  guid: fd07928e305f7b4ab4bc8cb89c20de8b
+  Banks:
+  - {fileID: 114371609069919142}
+  IsStream: 1
+  Is3D: 0
+  IsOneShot: 0
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 60024
+--- !u!114 &114964141705712062
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Path: Assets\FmodBanks\Master Bank.strings.bank
+  lastModified: 636903400181499881
+  LoadResult: 0
+  FileSizes:
+  - Name: 
+    Value: 672
   Exists: 1
