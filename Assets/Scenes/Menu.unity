@@ -942,6 +942,7 @@ MonoBehaviour:
   buttonSelectionEvent: event:/UI/Menu_validation
   pauseEvent: event:/UI/Pause_menu_popin
   unpauseEvent: event:/UI/Pause_menu_popout
+  gameoverEvent: event:/UI/Game_over
   comboResetEvent: event:/UI/Combo_lost
 --- !u!4 &650010949
 Transform:

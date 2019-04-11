@@ -67,6 +67,10 @@ namespace Audio
         [EventRef]
         private string unpauseEvent = "";
 
+        [SerializeField]
+        [EventRef]
+        private string gameoverEvent;
+
         [Header("Sounds")]
 
         [Header("Player Sounds")]
@@ -103,12 +107,18 @@ namespace Audio
             GameManager.Instance.OnPause += OnPause;
             GameManager.Instance.OnUnpause += OnUnpause;
             GameManager.Instance.OnComboIncreased += OnComboChange;
+
             GameManager.Instance.OnCombotReseted += () =>
             {
                 OnComboChange(0);
                 PlayOneShot(comboResetEvent);
             };
-            GameManager.Instance.OnGameOver += () => updateBeat = false;
+
+            GameManager.Instance.OnGameOver += () =>
+            {
+                updateBeat = false;
+                PlayOneShot(gameoverEvent);
+            };
         }
 
         private void OnComboChange(int _combo)

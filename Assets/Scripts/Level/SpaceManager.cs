@@ -40,7 +40,7 @@ namespace Level
         {
             for (int i = 0; i < 200; i++)
             {
-                Gizmos.color = (i % 2) == 1 ? Color.red : Color.blue;
+                Gizmos.color = i % 2 == 1 ? Color.red : Color.blue;
                 Gizmos.DrawLine(Vector3.right * (i - .5f), Vector3.right * ((i + 1) - .5f));
             }
         }
