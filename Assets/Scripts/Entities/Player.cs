@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
 using System.Collections.Generic;
+using Audio;
 using UnityEngine.UI;
 
 namespace Entities
@@ -98,7 +99,7 @@ namespace Entities
         override protected void OnHit(int damage)
         {
             GameManager.Instance.CombotReseted();
-
+            AudioManager.Instance.PlayHitEvent();
             HealBar.sprite = SpritesHealBar[life];
         }
 
@@ -108,7 +109,7 @@ namespace Entities
 
             HealBar.sprite = SpritesHealBar[life];
         }
-        
+
         void ChangeLayer()
         {
             switch (NexLayer)
@@ -143,7 +144,7 @@ namespace Entities
         private void Flip()
         {
             m_FacingRight = !m_FacingRight;
-            
+
             Vector3 theScale = transform.localScale;
             theScale.x *= -1;
             transform.localScale = theScale;
