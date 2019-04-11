@@ -28,6 +28,12 @@ public class GameManager : MonoBehaviour
         DontDestroyOnLoad(gameObject);
     }
 
+    private void Start()
+    {
+        if(!startOnPlay)
+            OnMenu?.Invoke();
+    }
+
     private void Update()
     {
         if(startOnPlay)

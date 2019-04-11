@@ -81,7 +81,14 @@ namespace Audio
             GameManager.Instance.OnPlay += OnPlay;
             GameManager.Instance.OnPause += OnPause;
             GameManager.Instance.OnUnpause += OnUnpause;
+            GameManager.Instance.OnComboIncreased += OnComboChange;
+            GameManager.Instance.OnCombotReseted += () => OnComboChange(0);
             GameManager.Instance.OnGameOver += () => updateBeat = false;
+        }
+
+        private void OnComboChange(int _combo)
+        {
+            musicInstance.setParameterValue("Main", _combo > 3 ? 3f : _combo + 1);
         }
 
         private void OnPause()
@@ -98,7 +105,7 @@ namespace Audio
 
         private void OnPlay()
         {
-            musicInstance.stop(FMOD.Studio.STOP_MODE.ALLOWFADEOUT);
+            menuInstance.stop(FMOD.Studio.STOP_MODE.ALLOWFADEOUT);
 
             if (!musicInstance.isValid())
                 musicInstance = RuntimeManager.CreateInstance(musicEvent);
