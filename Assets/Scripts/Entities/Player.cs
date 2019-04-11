@@ -1,4 +1,6 @@
 ﻿using UnityEngine;
+using System.Collections.Generic;
+using UnityEngine.UI;
 
 namespace Entities
 {
@@ -18,6 +20,9 @@ namespace Entities
         private bool m_FacingRight = true;
         private int NexLayer = 0;
         private int CurrentLayer = 0;
+
+        public Image HealBar;
+        public List<Sprite> SpritesHealBar;
 
         protected override void Start()
         {
@@ -93,11 +98,15 @@ namespace Entities
         override protected void OnHit(int damage)
         {
             GameManager.Instance.CombotReseted();
+
+            HealBar.sprite = SpritesHealBar[life];
         }
 
         override protected void OnDie()
         {
             gameObject.SetActive(false);
+
+            HealBar.sprite = SpritesHealBar[life];
         }
         
         void ChangeLayer()

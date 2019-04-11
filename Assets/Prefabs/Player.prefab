@@ -101,6 +101,12 @@ MonoBehaviour:
   MoveRight: {fileID: 11400000, guid: ef48ae9c19fd7bc449c33b692055b0b3, type: 2}
   Attack: {fileID: 11400000, guid: ef6c0b225d938e64792b3456a5ed3272, type: 2}
   Jump: {fileID: 11400000, guid: afb384e58ff93864da9cb33e5f6c60e9, type: 2}
+  HealBar: {fileID: 0}
+  SpritesHealBar:
+  - {fileID: 21300000, guid: 2903c1b9b40abd5438a18c5adadb27bb, type: 3}
+  - {fileID: 21300000, guid: 0886b5df84c1cd04282f90d2854a9645, type: 3}
+  - {fileID: 21300000, guid: 1911d5291f834b341817400e79cf3bfe, type: 3}
+  - {fileID: 21300000, guid: 641efc9e3c1b04d469f2efb9248dae93, type: 3}
 --- !u!95 &3699118488521537663
 Animator:
   serializedVersion: 3
