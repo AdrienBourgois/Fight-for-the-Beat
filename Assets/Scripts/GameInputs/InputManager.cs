@@ -25,6 +25,8 @@ namespace GameInputs
         private bool canInteract;
         private bool hadInteract;
 
+        private bool hadBeginPlayed;
+
         private void Awake()
         {
             Instance = this;
@@ -45,11 +47,14 @@ namespace GameInputs
                 ProcessInput(Keys.Up);
             if (Input.GetButtonDown("Down"))
                 ProcessInput(Keys.Down);
+
+            if(Input.GetKeyDown(KeyCode.Escape))
+                GameManager.Instance.Pause(true);
         }
 
         private void OnOffbeat(int _beat)
         {
-            if(!hadInteract)
+            if(!hadInteract && hadBeginPlayed)
                 OnNoKeyPressed?.Invoke();
 
             canInteract = true;
@@ -58,6 +63,8 @@ namespace GameInputs
 
         private void ProcessInput(Keys _key)
         {
+            hadBeginPlayed = true;
+
             if (hadInteract)
             {
                 OnMultipleKeyPressed?.Invoke();

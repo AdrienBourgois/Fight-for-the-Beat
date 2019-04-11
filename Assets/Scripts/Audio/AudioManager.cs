@@ -71,9 +71,27 @@ namespace Audio
         [EventRef]
         private string gameoverEvent;
 
-        [Header("Sounds")]
-
         [Header("Player Sounds")]
+        [SerializeField]
+        [EventRef]
+        private string hitEvent = "";
+
+        [SerializeField]
+        [EventRef]
+        private string jumpEvent = "";
+
+        [SerializeField]
+        [EventRef]
+        private string dieEvent = "";
+
+        [SerializeField]
+        [EventRef]
+        private string walkEvent = "";
+
+        [SerializeField]
+        [EventRef]
+        private string attackEvent = "";
+
         [SerializeField]
         [EventRef]
         private string comboResetEvent = "";
@@ -118,6 +136,7 @@ namespace Audio
             {
                 updateBeat = false;
                 PlayOneShot(gameoverEvent);
+                PlayOneShot(dieEvent);
             };
         }
 
@@ -187,14 +206,12 @@ namespace Audio
             Offbeat = (int)(total_beat + 60f / Bpm) % BeatCount + 1;
         }
 
-        public static void PlayOneShot(string _event)
-        {
-            RuntimeManager.PlayOneShot(_event);
-        }
+        public static void PlayOneShot(string _event) => RuntimeManager.PlayOneShot(_event);
 
-        public void PlayButtonEvent()
-        {
-            PlayOneShot(buttonSelectionEvent);
-        }
+        public void PlayButtonEvent() => PlayOneShot(buttonSelectionEvent);
+        public void PlayHitEvent() => PlayOneShot(hitEvent);
+        public void PlayJumpEvent() => PlayOneShot(jumpEvent);
+        public void PlayAttackEvent() => PlayOneShot(attackEvent);
+        public void PlayWalkEvent() => PlayOneShot(walkEvent);
     }
 }

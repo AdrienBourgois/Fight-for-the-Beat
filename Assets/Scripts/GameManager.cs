@@ -22,6 +22,8 @@ public class GameManager : MonoBehaviour
     [SerializeField]
     private bool startOnPlay;
 
+    private bool onGame;
+
     private void Awake()
     {
         Instance = this;
@@ -47,6 +49,7 @@ public class GameManager : MonoBehaviour
     {
         SceneManager.LoadScene(1);
         OnPlay?.Invoke();
+        onGame = true;
     }
 
     public void Pause(bool _pause)
@@ -59,12 +62,14 @@ public class GameManager : MonoBehaviour
 
     public void Menu()
     {
+        onGame = false;
         SceneManager.LoadScene(0);
         OnMenu?.Invoke();
     }
 
     public void GameOver()
     {
+        onGame = false;
         OnGameOver?.Invoke();
     }
 
