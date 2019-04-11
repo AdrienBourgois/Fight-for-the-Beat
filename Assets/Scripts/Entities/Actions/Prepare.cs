@@ -14,7 +14,7 @@ namespace Entities
             Entity entity = collector.GetComponent<Entity>();
             if (entity)
             {
-                entity.Dodge = true;
+                entity.Dodge = false;
             }
 
             Animator animator = collector.GetComponent<Animator>();
