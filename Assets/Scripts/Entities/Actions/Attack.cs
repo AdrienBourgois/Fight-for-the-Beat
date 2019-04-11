@@ -21,12 +21,20 @@ namespace Entities
                     if(space > 0)
                     {
                         Entity target = entity.GetNextRelativeSpaceEntity(space);
-                        target?.Hit(1);
+                        if(target)
+                        {
+                            if (!Dodgeable || (!target.Dodge && Dodgeable))
+                                target.Hit(1);
+                        }
                     }
                     else if (space < 0)
                     {
                         Entity target = entity.GetPreviousRelativeSpaceEntity(space * -1);
-                        target?.Hit(1);
+                        if (target)
+                        {
+                            if (!Dodgeable || (!target.Dodge && Dodgeable))
+                                target.Hit(1);
+                        }
                     }
                 }
             }

@@ -4,12 +4,18 @@ using UnityEngine.SceneManagement;
 public class GameManager : MonoBehaviour
 {
     public delegate void GameEvent();
+    public delegate void ComboEvent(int comboConteur);
+
     public static GameManager Instance { get; private set; }
 
     public event GameEvent OnMenu;
     public event GameEvent OnPlay;
     public event GameEvent OnPlayerPlayed;
     public event GameEvent OnGameOver;
+
+    public event ComboEvent OnComboIncreased;
+    public event GameEvent OnCombotReseted;
+    private int ComboLevel = 0;
 
     [SerializeField]
     private bool startOnPlay = false;
@@ -35,11 +41,6 @@ public class GameManager : MonoBehaviour
         OnPlay?.Invoke();
     }
 
-    public void PlayerPlayed()
-    {
-        OnPlayerPlayed?.Invoke();
-    }
-
     public void Menu()
     {
         SceneManager.LoadScene(0);
@@ -55,4 +56,22 @@ public class GameManager : MonoBehaviour
     {
         Application.Quit();
     }
+    
+    public void PlayerPlayed()
+    {
+        OnPlayerPlayed?.Invoke();
+    }
+    
+    public void ComboIncreased()
+    {
+        ComboLevel++;
+        OnComboIncreased?.Invoke(ComboLevel);
+    }
+
+    public void CombotReseted()
+    {
+        ComboLevel = 0;
+        OnCombotReseted?.Invoke();
+    }
+
 }

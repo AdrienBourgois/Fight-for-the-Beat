@@ -106,13 +106,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6ee6aafaf0cce2041a403e17ae167980, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  life: 1
+  Dodge: 0
   Idle: {fileID: 0}
-  MoveLeft: {fileID: 11400000, guid: b052ace3252d8bd40b7bd345063bdc0f, type: 2}
+  MoveLeft: {fileID: 0}
   MoveRight: {fileID: 0}
-  Attack: {fileID: 11400000, guid: 7a7a92e4698ef1046893c844663da2ec, type: 2}
-  AttackLow: {fileID: 11400000, guid: 79b083a828559d14a81ac3b2ac3d1343, type: 2}
-  PrepareAttack: {fileID: 0}
-  PrepareAttackAttackLow: {fileID: 0}
+  Attack: {fileID: 0}
+  AttackLow: {fileID: 0}
+  AttackDash: {fileID: 0}
+  AI: {fileID: 0}
 --- !u!95 &4904430738400848162
 Animator:
   serializedVersion: 3
@@ -123,7 +125,7 @@ Animator:
   m_GameObject: {fileID: 4904430738400848163}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 689330f91a39a564e9e3de487f47798d, type: 2}
+  m_Controller: {fileID: 0}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
