@@ -4,8 +4,8 @@ using UnityEngine;
 
 namespace Entities
 {
-    [CreateAssetMenu(menuName = "Action/Jump")]
-    public class Jump : Action
+    [CreateAssetMenu(menuName = "Action/Dodge")]
+    public class Dodge : Action
     {
         public override void Execute(GameObject collector)
         {
@@ -18,7 +18,7 @@ namespace Entities
             Animator animator = collector.GetComponent<Animator>();
             if (animator)
             {
-                animator.SetTrigger("Jump");
+                animator.SetTrigger("Dodge");
             }
         }
     }

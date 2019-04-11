@@ -15,7 +15,7 @@ PrefabInstance:
     - target: {fileID: 4904430738400848161, guid: 4cc5be950180d4e4cbea53e81d93dc50,
         type: 3}
       propertyPath: Attack.Array.size
-      value: 1
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 4904430738400848161, guid: 4cc5be950180d4e4cbea53e81d93dc50,
         type: 3}
@@ -39,6 +39,18 @@ PrefabInstance:
       propertyPath: Attack.Array.data[0]
       value: 
       objectReference: {fileID: 11400000, guid: 7a7a92e4698ef1046893c844663da2ec,
+        type: 2}
+    - target: {fileID: 4904430738400848161, guid: 4cc5be950180d4e4cbea53e81d93dc50,
+        type: 3}
+      propertyPath: Idle
+      value: 
+      objectReference: {fileID: 11400000, guid: 379c8f7b191e05d4b9c8efe379963bd2,
+        type: 2}
+    - target: {fileID: 4904430738400848161, guid: 4cc5be950180d4e4cbea53e81d93dc50,
+        type: 3}
+      propertyPath: Attack.Array.data[1]
+      value: 
+      objectReference: {fileID: 11400000, guid: 66431769ce40aa44f95bee7fb7c3dc40,
         type: 2}
     - target: {fileID: 4904430738400848190, guid: 4cc5be950180d4e4cbea53e81d93dc50,
         type: 3}

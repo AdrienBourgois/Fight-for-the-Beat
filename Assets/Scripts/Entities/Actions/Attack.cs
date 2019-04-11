@@ -18,20 +18,20 @@ namespace Entities
             {
                 entity.Dodge = false;
 
-                foreach (int space in SpaceEffect)
+                foreach (int Space in SpaceEffect)
                 {
-                    if(space > 0)
+                    if (Space > 0)
                     {
-                        Entity target = entity.GetNextRelativeSpaceEntity(space);
-                        if(target)
+                        Entity target = entity.GetNextRelativeSpaceEntity(Space);
+                        if (target)
                         {
                             if (!Dodgeable || (!target.Dodge && Dodgeable))
                                 target.Hit(1);
                         }
                     }
-                    else if (space < 0)
+                    else if (Space < 0)
                     {
-                        Entity target = entity.GetPreviousRelativeSpaceEntity(space * -1);
+                        Entity target = entity.GetPreviousRelativeSpaceEntity(Space * -1);
                         if (target)
                         {
                             if (!Dodgeable || (!target.Dodge && Dodgeable))
