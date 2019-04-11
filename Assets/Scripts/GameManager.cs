@@ -8,6 +8,8 @@ public class GameManager : MonoBehaviour
 
     public event GameEvent OnMenu;
     public event GameEvent OnPlay;
+    public event GameEvent OnPause;
+    public event GameEvent OnUnpause;
     public event GameEvent OnPlayerPlayed;
     public event GameEvent OnGameOver;
 
@@ -33,6 +35,14 @@ public class GameManager : MonoBehaviour
     {
         SceneManager.LoadScene(1);
         OnPlay?.Invoke();
+    }
+
+    public void Pause(bool _pause)
+    {
+        if(_pause)
+            OnPause?.Invoke();
+        else
+            OnUnpause?.Invoke();
     }
 
     public void PlayerPlayed()
