@@ -14,6 +14,7 @@ public class GameManager : MonoBehaviour
     public event GameEvent OnUnpause;
     public event GameEvent OnPlayerPlayed;
     public event GameEvent OnGameOver;
+    public event GameEvent OnWin;
 
     public event ComboEvent OnComboIncreased;
     public event GameEvent OnCombotReseted;
@@ -26,6 +27,12 @@ public class GameManager : MonoBehaviour
 
     private void Awake()
     {
+        if (Instance)
+        {
+            Destroy(gameObject);
+            return;
+        }
+
         Instance = this;
         DontDestroyOnLoad(gameObject);
     }
@@ -71,6 +78,12 @@ public class GameManager : MonoBehaviour
     {
         onGame = false;
         OnGameOver?.Invoke();
+    }
+
+    public void Win()
+    {
+        onGame = false;
+        OnWin?.Invoke();
     }
 
     public void Quit()

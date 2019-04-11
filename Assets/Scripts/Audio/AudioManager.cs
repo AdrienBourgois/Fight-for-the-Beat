@@ -163,8 +163,7 @@ namespace Audio
         {
             menuInstance.stop(FMOD.Studio.STOP_MODE.ALLOWFADEOUT);
 
-            if (!musicInstance.isValid())
-                musicInstance = RuntimeManager.CreateInstance(musicEvent);
+            musicInstance = RuntimeManager.CreateInstance(musicEvent);
 
             if (!ambianceInstance.isValid())
                 ambianceInstance = RuntimeManager.CreateInstance(ambianceEvent);
