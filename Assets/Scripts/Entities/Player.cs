@@ -16,6 +16,7 @@ namespace Entities
         private Animator animator;
 
         private bool m_FacingRight = true;
+        private int NexLayer = 0;
 
         protected override void Start()
         {
@@ -99,10 +100,10 @@ namespace Entities
         {
             gameObject.SetActive(false);
         }
-
-        void ChangeAnimatorLayer(int layer)
+        
+        void ChangeLayer()
         {
-            switch(layer)
+            switch (NexLayer)
             {
                 case (0):
                     animator.SetLayerWeight(animator.GetLayerIndex("Combo1"), 0);
@@ -119,8 +120,17 @@ namespace Entities
                 default:
                     break;
             }
+
         }
 
+        void ChangeAnimatorLayer(int layer)
+        {
+            if (NexLayer < 3)
+            {
+                animator.SetTrigger("Morph");
+                NexLayer = layer;
+            }
+        }
 
         private void Flip()
         {
