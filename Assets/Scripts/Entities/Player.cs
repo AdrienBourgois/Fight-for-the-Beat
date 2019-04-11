@@ -13,15 +13,18 @@ namespace Entities
         private Sequence CurentSequence = null;
         private int CurentActionIndex;
 
+        private Animator animator;
+
         protected override void Start()
         {
             base.Start();
-
-            Life = 3;
+            animator = GetComponent<Animator>();
 
             GameInputs.InputManager.Instance.OnKeyPressed += Controll;
 
-            //GameInputs.InputManager.Instance.OnNoKeyPressed += () => { LaunchSequence(Idle); ExecuteSequence(); };
+            //GameInputs.InputManager.Instance.OnNoKeyPressed += () => { LaunchSequence(Idle); ExecuteSequence(); GameManager.Instance.CombotReseted();; };
+            GameManager.Instance.OnComboIncreased += ChangeAnimatorLayer;
+            GameManager.Instance.OnCombotReseted += () => { ChangeAnimatorLayer(0); };
         }
 
         void Controll(GameInputs.InputManager.Keys key)
@@ -38,7 +41,7 @@ namespace Entities
                         LaunchSequence(MoveLeft);
                     break;
                 case (GameInputs.InputManager.Keys.Up):
-
+                    LaunchSequence(Jump);
                     break;
                 case (GameInputs.InputManager.Keys.Down):
                     LaunchSequence(Idle);
@@ -78,9 +81,36 @@ namespace Entities
             GameManager.Instance.PlayerPlayed();
         }
 
+
+        override protected void OnHit(int damage)
+        {
+            GameManager.Instance.CombotReseted();
+        }
+
         override protected void OnDie()
         {
             gameObject.SetActive(false);
+        }
+
+        void ChangeAnimatorLayer(int layer)
+        {
+            switch(layer)
+            {
+                case (0):
+                    animator.SetLayerWeight(animator.GetLayerIndex("Combo1"), 0);
+                    animator.SetLayerWeight(animator.GetLayerIndex("Combo2"), 0);
+                    break;
+                case (1):
+                    animator.SetLayerWeight(animator.GetLayerIndex("Combo1"), 1);
+                    animator.SetLayerWeight(animator.GetLayerIndex("Combo2"), 0);
+                    break;
+                case (2):
+                    animator.SetLayerWeight(animator.GetLayerIndex("Combo1"), 0);
+                    animator.SetLayerWeight(animator.GetLayerIndex("Combo2"), 1);
+                    break;
+                default:
+                    break;
+            }
         }
     }
 }

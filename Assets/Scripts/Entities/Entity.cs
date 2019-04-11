@@ -5,11 +5,15 @@ namespace Entities
 {
     public abstract class Entity : MonoBehaviour
     {
-        public int Life { get; protected set; }
+        [SerializeField]
+        protected int life = 1;
+        public int Life { get { return Life; } protected set { life = value; } }
 
         public int BeginSpaceIndex { get; protected set; }
         public int EndSpaceIndex { get; protected set; }
         public bool IsOnSpace(int _index) => _index >= BeginSpaceIndex && _index <= EndSpaceIndex;
+
+        public bool Dodge = false;
 
         public void SetSpaceIndex(int _index, int _size = 1)
         {
@@ -45,9 +49,9 @@ namespace Entities
 
         public void Hit(int _damages)
         {
-            Life -= _damages;
+            life -= _damages;
 
-            if (Life > 0)
+            if (life > 0)
                 OnHit(_damages);
             else
                 Die();

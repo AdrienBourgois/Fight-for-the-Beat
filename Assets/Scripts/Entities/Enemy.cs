@@ -1,4 +1,5 @@
 ﻿using UnityEngine;
+using System.Collections.Generic;
 
 namespace Entities
 {
@@ -7,42 +8,22 @@ namespace Entities
         public Sequence Idle = null;
         public Sequence MoveLeft = null;
         public Sequence MoveRight = null;
-        public Sequence Attack = null;
-        public Sequence AttackLow = null;
-        public Sequence AttackDash = null;
+        public List<Sequence> Attack;
 
         private Sequence CurentSequence = null;
         private int CurentActionIndex;
 
-
+        public Brain AI;
 
         protected override void Start()
         {
             base.Start();
 
-            Life = 2;
-
-            GameManager.Instance.OnPlayerPlayed += Controll;
+            if (AI)
+                GameManager.Instance.OnPlayerPlayed +=  () => AI.Controll(this.gameObject);
         }
-
-        void Controll()
-        {
-            if(GetPreviousSpaceEntity())
-            {
-                float rand = Random.Range(1, 2);
-                if(rand == 2)
-                    LaunchSequence(Attack);
-                else
-                    LaunchSequence(AttackLow);
-            }
-            else
-                LaunchSequence(MoveLeft);
-
-            ExecuteSequence();
-        }
-
-
-        void LaunchSequence(Sequence sequence)
+        
+        public void LaunchSequence(Sequence sequence)
         {
             if (CurentSequence) return;
 
@@ -59,6 +40,7 @@ namespace Entities
         {
             if (CurentSequence != null)
             {
+                Debug.Log(CurentSequence.name + " Execute " + CurentSequence.Actions[CurentActionIndex].name);
 
                 if (CurentSequence.Actions[CurentActionIndex] != null)
                     CurentSequence.Actions[CurentActionIndex].Execute(this.gameObject);
@@ -71,8 +53,16 @@ namespace Entities
             }
         }
 
+        override protected void OnHit(int damage)
+        {
+            GameManager.Instance.ComboIncreased();
+        }
+
         override protected void OnDie()
         {
+            CurentSequence = null;
+            GameManager.Instance.ComboIncreased();
+            GameManager.Instance.ComboIncreased();
             gameObject.SetActive(false);
         }
     }

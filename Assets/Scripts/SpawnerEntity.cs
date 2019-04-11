@@ -8,10 +8,12 @@ public class SpawnerEntity : MonoBehaviour
     
     public int EnemySpaceSize;
     public int EnemySpacePosition;
-
-    void Start()
+    
+    public void Spawn()
     {
-        Entities.Entity newEntity = Instantiate<Entities.Entity>(PrefabEntity,transform);
+        Entities.Entity newEntity = Instantiate<Entities.Entity>(PrefabEntity, transform.position, Quaternion.identity);
         newEntity.SetSpaceIndex(EnemySpacePosition, EnemySpaceSize);
+        
+        gameObject.SetActive(false);
     }
 }

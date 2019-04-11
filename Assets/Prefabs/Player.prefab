@@ -106,11 +106,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d92cc8e9c7ca75048b2f519a421a81e5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  life: 3
+  Dodge: 0
   Idle: {fileID: 11400000, guid: 379c8f7b191e05d4b9c8efe379963bd2, type: 2}
   MoveLeft: {fileID: 11400000, guid: 7aa802dfa2fa3f946902c8135c6a6be9, type: 2}
   MoveRight: {fileID: 11400000, guid: ef48ae9c19fd7bc449c33b692055b0b3, type: 2}
   Attack: {fileID: 11400000, guid: ef6c0b225d938e64792b3456a5ed3272, type: 2}
-  Jump: {fileID: 0}
+  Jump: {fileID: 11400000, guid: afb384e58ff93864da9cb33e5f6c60e9, type: 2}
 --- !u!95 &3699118488521537663
 Animator:
   serializedVersion: 3
