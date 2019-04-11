@@ -65,7 +65,6 @@ namespace Entities
         {
             CurentSequence = null;
             GameManager.Instance.ComboIncreased();
-            GameManager.Instance.ComboIncreased();
 
             GameManager.Instance.OnPlayerPlayed -= Controll;
 

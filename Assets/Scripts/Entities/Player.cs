@@ -17,6 +17,7 @@ namespace Entities
 
         private bool m_FacingRight = true;
         private int NexLayer = 0;
+        private int CurrentLayer = 0;
 
         protected override void Start()
         {
@@ -35,14 +36,12 @@ namespace Entities
             switch (key)
             {
                 case (GameInputs.InputManager.Keys.Right):
+                    if (!m_FacingRight)
+                        Flip();
                     if (GetNextSpaceEntity())
                         LaunchSequence(Attack);
                     else
-                    {
-                        if (!m_FacingRight)
-                            Flip();
                         LaunchSequence(MoveRight);
-                    }
                     break;
                 case (GameInputs.InputManager.Keys.Left):
                     if (m_FacingRight)
@@ -120,12 +119,12 @@ namespace Entities
                 default:
                     break;
             }
-
+            CurrentLayer = NexLayer;
         }
 
         void ChangeAnimatorLayer(int layer)
         {
-            if (NexLayer < 3)
+            if (layer < 3 && NexLayer != layer)
             {
                 animator.SetTrigger("Morph");
                 NexLayer = layer;
