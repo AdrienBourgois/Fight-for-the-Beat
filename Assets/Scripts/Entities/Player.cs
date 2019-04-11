@@ -15,6 +15,8 @@ namespace Entities
 
         private Animator animator;
 
+        private bool m_FacingRight = true;
+
         protected override void Start()
         {
             base.Start();
@@ -32,13 +34,19 @@ namespace Entities
             switch (key)
             {
                 case (GameInputs.InputManager.Keys.Right):
-                    if(GetNextSpaceEntity())
+                    if (GetNextSpaceEntity())
                         LaunchSequence(Attack);
                     else
+                    {
+                        if (!m_FacingRight)
+                            Flip();
                         LaunchSequence(MoveRight);
+                    }
                     break;
                 case (GameInputs.InputManager.Keys.Left):
-                        LaunchSequence(MoveLeft);
+                    if (m_FacingRight)
+                        Flip();
+                    LaunchSequence(MoveLeft);
                     break;
                 case (GameInputs.InputManager.Keys.Up):
                     LaunchSequence(Jump);
@@ -111,6 +119,16 @@ namespace Entities
                 default:
                     break;
             }
+        }
+
+
+        private void Flip()
+        {
+            m_FacingRight = !m_FacingRight;
+            
+            Vector3 theScale = transform.localScale;
+            theScale.x *= -1;
+            transform.localScale = theScale;
         }
     }
 }

@@ -16,7 +16,9 @@ namespace Entities
             Entity entity = collector.GetComponent<Entity>();
             if (entity)
             {
-                foreach(int space in SpaceEffect)
+                entity.Dodge = false;
+
+                foreach (int space in SpaceEffect)
                 {
                     if(space > 0)
                     {

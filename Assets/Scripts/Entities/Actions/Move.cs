@@ -22,6 +22,7 @@ namespace Entities
             Entity entity = collector.GetComponent<Entity>();
             if (entity)
             {
+                entity.Dodge = false;
                 entity.Move(SpaceLenght);
             }
 

@@ -18,9 +18,12 @@ namespace Entities
         protected override void Start()
         {
             base.Start();
+            GameManager.Instance.OnPlayerPlayed += Controll;
+        }
 
-            if (AI)
-                GameManager.Instance.OnPlayerPlayed +=  () => AI.Controll(this.gameObject);
+        void Controll()
+        {
+            AI.Controll(this.gameObject);
         }
         
         public void LaunchSequence(Sequence sequence)
@@ -63,6 +66,9 @@ namespace Entities
             CurentSequence = null;
             GameManager.Instance.ComboIncreased();
             GameManager.Instance.ComboIncreased();
+
+            GameManager.Instance.OnPlayerPlayed -= Controll;
+
             gameObject.SetActive(false);
         }
     }
