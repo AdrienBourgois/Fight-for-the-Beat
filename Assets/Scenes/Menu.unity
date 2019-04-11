@@ -425,6 +425,7 @@ GameObject:
   - component: {fileID: 371280848}
   - component: {fileID: 371280847}
   - component: {fileID: 371280849}
+  - component: {fileID: 371280846}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -432,6 +433,20 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!114 &371280846
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 371280845}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7bc40c436726cc247b0e794adb3b1907, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  material: {fileID: 2100000, guid: 99499af5ecf4f15488fbb5ef027322d6, type: 2}
+  postProcess: 1
 --- !u!20 &371280847
 Camera:
   m_ObjectHideFlags: 0
@@ -897,9 +912,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d121780e08fdc204e8d548623ac81d32, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  menuEvent: event:/Tick
-  musicEvent: 
-  ambianceEvent: 
+  menuEvent: event:/Title screen
+  musicEvent: event:/Music
+  ambianceEvent: event:/Ambiance
 --- !u!4 &650010949
 Transform:
   m_ObjectHideFlags: 0
@@ -1731,8 +1746,8 @@ Canvas:
   m_GameObject: {fileID: 1684231440}
   m_Enabled: 1
   serializedVersion: 3
-  m_RenderMode: 0
-  m_Camera: {fileID: 0}
+  m_RenderMode: 1
+  m_Camera: {fileID: 371280847}
   m_PlaneDistance: 100
   m_PixelPerfect: 0
   m_ReceivesEvents: 1
@@ -1815,7 +1830,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0.25}
   m_AnchorMax: {x: 1, y: 0.75}
-  m_AnchoredPosition: {x: -1.61, y: 0}
+  m_AnchoredPosition: {x: -1.6100006, y: 0}
   m_SizeDelta: {x: -3.23, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1705580623
