@@ -12,4 +12,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b25c88d8a8de61241983e24bcc9b14ed, type: 3}
   m_Name: PlayerJump
   m_EditorClassIdentifier: 
-  Actions: []
+  Actions:
+  - {fileID: 11400000, guid: 152053ff36af9974586339ec016f6584, type: 2}

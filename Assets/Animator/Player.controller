@@ -29,19 +29,19 @@ AnimatorController:
     m_Controller: {fileID: 0}
   m_AnimatorLayers:
   - serializedVersion: 5
-    m_Name: Base Layer
+    m_Name: Combo0
     m_StateMachine: {fileID: 1107533943906098108}
     m_Mask: {fileID: 0}
     m_Motions: []
     m_Behaviours: []
     m_BlendingMode: 0
     m_SyncedLayerIndex: -1
-    m_DefaultWeight: 0
+    m_DefaultWeight: 1
     m_IKPass: 0
     m_SyncedLayerAffectsTiming: 0
     m_Controller: {fileID: 9100000}
   - serializedVersion: 5
-    m_Name: New Layer
+    m_Name: Combo1
     m_StateMachine: {fileID: 1107818558491148354}
     m_Mask: {fileID: 0}
     m_Motions:
@@ -56,7 +56,7 @@ AnimatorController:
       m_Motion: {fileID: 7400000, guid: 60397d22eba9cf44984a7f1d3663b8b8, type: 2}
     - serializedVersion: 2
       m_State: {fileID: 1102304555752390354}
-      m_Motion: {fileID: 0}
+      m_Motion: {fileID: 7400000, guid: 6d513cec480168f4b98c81e236183f4b, type: 2}
     m_Behaviours: []
     m_BlendingMode: 0
     m_SyncedLayerIndex: 0
@@ -65,7 +65,7 @@ AnimatorController:
     m_SyncedLayerAffectsTiming: 0
     m_Controller: {fileID: 9100000}
   - serializedVersion: 5
-    m_Name: New Layer 0
+    m_Name: Combo2
     m_StateMachine: {fileID: 1107997696717815026}
     m_Mask: {fileID: 0}
     m_Motions:
@@ -80,7 +80,7 @@ AnimatorController:
       m_Motion: {fileID: 7400000, guid: ff83eb2b1f0ce0b47b51d33701ea0c57, type: 2}
     - serializedVersion: 2
       m_State: {fileID: 1102304555752390354}
-      m_Motion: {fileID: 0}
+      m_Motion: {fileID: 7400000, guid: 2e7ab2c18107c8249a7616934442a033, type: 2}
     m_Behaviours: []
     m_BlendingMode: 0
     m_SyncedLayerIndex: 0
@@ -104,7 +104,7 @@ AnimatorStateTransition:
   serializedVersion: 3
   m_TransitionDuration: 0
   m_TransitionOffset: 0
-  m_ExitTime: 50
+  m_ExitTime: 0
   m_HasExitTime: 1
   m_HasFixedDuration: 1
   m_InterruptionSource: 0
@@ -250,7 +250,7 @@ AnimatorState:
   m_MirrorParameterActive: 0
   m_CycleOffsetParameterActive: 0
   m_TimeParameterActive: 0
-  m_Motion: {fileID: 0}
+  m_Motion: {fileID: 7400000, guid: 76120b822e652fd4b8cc0c747b3a12be, type: 2}
   m_Tag: 
   m_SpeedParameter: 
   m_MirrorParameter: 
@@ -346,7 +346,7 @@ AnimatorStateMachine:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: Base Layer
+  m_Name: Combo0
   m_ChildStates:
   - serializedVersion: 1
     m_State: {fileID: 1102679233509540864}
@@ -377,7 +377,7 @@ AnimatorStateMachine:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: New Layer
+  m_Name: Combo1
   m_ChildStates: []
   m_ChildStateMachines: []
   m_AnyStateTransitions: []
@@ -396,7 +396,7 @@ AnimatorStateMachine:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: New Layer 0
+  m_Name: Combo2
   m_ChildStates: []
   m_ChildStateMachines: []
   m_AnyStateTransitions: []

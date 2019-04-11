@@ -12,4 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b25c88d8a8de61241983e24bcc9b14ed, type: 3}
   m_Name: EnemyAttackFeint
   m_EditorClassIdentifier: 
-  Actions: []
+  Actions:
+  - {fileID: 11400000, guid: 6e5998a7457dc3847b8ce040fd79c3c0, type: 2}
+  - {fileID: 11400000, guid: 0bd729a960614e947ba8d1d6394806bb, type: 2}
+  - {fileID: 11400000, guid: 5086c7e507485db438fe9812bedd83aa, type: 2}
+  - {fileID: 11400000, guid: 1ce011e9b07aa574182cc8ff36e869c3, type: 2}
