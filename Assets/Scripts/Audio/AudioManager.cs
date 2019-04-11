@@ -41,6 +41,7 @@ namespace Audio
             }
         }
 
+        [Header("Musics")]
         [SerializeField]
         [EventRef]
         private string menuEvent = "";
@@ -52,6 +53,26 @@ namespace Audio
         [SerializeField]
         [EventRef]
         private string ambianceEvent = "";
+
+        [Header("UI Sounds")]
+        [SerializeField]
+        [EventRef]
+        private string buttonSelectionEvent = "";
+
+        [SerializeField]
+        [EventRef]
+        private string pauseEvent = "";
+
+        [SerializeField]
+        [EventRef]
+        private string unpauseEvent = "";
+
+        [Header("Sounds")]
+
+        [Header("Player Sounds")]
+        [SerializeField]
+        [EventRef]
+        private string comboResetEvent = "";
 
         private EventInstance menuInstance;
         private EventInstance musicInstance;
@@ -82,7 +103,11 @@ namespace Audio
             GameManager.Instance.OnPause += OnPause;
             GameManager.Instance.OnUnpause += OnUnpause;
             GameManager.Instance.OnComboIncreased += OnComboChange;
-            GameManager.Instance.OnCombotReseted += () => OnComboChange(0);
+            GameManager.Instance.OnCombotReseted += () =>
+            {
+                OnComboChange(0);
+                PlayOneShot(comboResetEvent);
+            };
             GameManager.Instance.OnGameOver += () => updateBeat = false;
         }
 
@@ -94,12 +119,14 @@ namespace Audio
         private void OnPause()
         {
             musicInstance.setPaused(true);
+            PlayOneShot(pauseEvent);
             updateBeat = false;
         }
 
         private void OnUnpause()
         {
             musicInstance.setPaused(false);
+            PlayOneShot(unpauseEvent);
             updateBeat = true;
         }
 
@@ -148,6 +175,16 @@ namespace Audio
             float total_beat = time / (60f / Bpm);
             Beat = (int)total_beat % BeatCount + 1;
             Offbeat = (int)(total_beat + 60f / Bpm) % BeatCount + 1;
+        }
+
+        public static void PlayOneShot(string _event)
+        {
+            RuntimeManager.PlayOneShot(_event);
+        }
+
+        public void PlayButtonEvent()
+        {
+            PlayOneShot(buttonSelectionEvent);
         }
     }
 }
