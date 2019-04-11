@@ -4,6 +4,7 @@
 	{
 		_MainTex ("Texture", 2D) = "white" {}
 		_BlendTex ("Blend Texture", 2D) = "white" {}
+		_Opacity ("Opacity", Float) = 1
 	}
 	SubShader
 	{
@@ -39,6 +40,7 @@
 
 			sampler2D _MainTex;
 			sampler2D _BlendTex;
+			Float _Opacity;
 
 			fixed OverlayBlendMode(fixed basePixel, fixed blendPixel) {
 				if (basePixel < 0.5) {
@@ -59,7 +61,7 @@
 				blendedImage.g = OverlayBlendMode(renderTex.g, blendTex.g);
 				blendedImage.b = OverlayBlendMode(renderTex.b, blendTex.b);
 
-				renderTex = lerp(renderTex, blendedImage,  0.5f);
+				renderTex = lerp(renderTex, blendedImage,  _Opacity);
 
 				return renderTex;
 			}
