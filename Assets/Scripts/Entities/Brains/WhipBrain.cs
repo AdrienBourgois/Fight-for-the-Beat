@@ -12,14 +12,21 @@ namespace Entities
             Enemy enemy = collector.GetComponent<Enemy>();
             if (enemy)
             {
+                Entity target = enemy.GetPreviousSpaceEntity();
 
-                if (enemy.GetPreviousSpaceEntity())
+                if (target is Player)
                 {
                     int rand = Random.Range(0, enemy.Attack.Count);
                     enemy.LaunchSequence(enemy.Attack[rand]);
                 }
+                else if (target)
+                {
+                    enemy.LaunchSequence(enemy.Idle);
+                }
                 else
+                {
                     enemy.LaunchSequence(enemy.MoveLeft);
+                }
 
                 enemy.ExecuteSequence();
             }

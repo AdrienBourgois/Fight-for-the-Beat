@@ -295,7 +295,7 @@ PrefabInstance:
     - target: {fileID: 1292462395786862186, guid: 4b36806a4853bcf4a9fc19c9f2c6bde2,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 1292462395786862186, guid: 4b36806a4853bcf4a9fc19c9f2c6bde2,
         type: 3}
@@ -357,6 +357,91 @@ PrefabInstance:
         type: 3}
       propertyPath: EnemySpacePosition
       value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 1292462395786862187, guid: 4b36806a4853bcf4a9fc19c9f2c6bde2,
+        type: 3}
+      propertyPath: SpaceActivator
+      value: 1
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 4b36806a4853bcf4a9fc19c9f2c6bde2, type: 3}
+--- !u!1001 &1233533972
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 1292462395786862184, guid: 4b36806a4853bcf4a9fc19c9f2c6bde2,
+        type: 3}
+      propertyPath: m_Name
+      value: Spawner Entity 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 1292462395786862186, guid: 4b36806a4853bcf4a9fc19c9f2c6bde2,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 1292462395786862186, guid: 4b36806a4853bcf4a9fc19c9f2c6bde2,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1292462395786862186, guid: 4b36806a4853bcf4a9fc19c9f2c6bde2,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1292462395786862186, guid: 4b36806a4853bcf4a9fc19c9f2c6bde2,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1292462395786862186, guid: 4b36806a4853bcf4a9fc19c9f2c6bde2,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1292462395786862186, guid: 4b36806a4853bcf4a9fc19c9f2c6bde2,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1292462395786862186, guid: 4b36806a4853bcf4a9fc19c9f2c6bde2,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1292462395786862186, guid: 4b36806a4853bcf4a9fc19c9f2c6bde2,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 1292462395786862186, guid: 4b36806a4853bcf4a9fc19c9f2c6bde2,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1292462395786862186, guid: 4b36806a4853bcf4a9fc19c9f2c6bde2,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1292462395786862186, guid: 4b36806a4853bcf4a9fc19c9f2c6bde2,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1292462395786862187, guid: 4b36806a4853bcf4a9fc19c9f2c6bde2,
+        type: 3}
+      propertyPath: PrefabEntity
+      value: 
+      objectReference: {fileID: 1943621299190879607, guid: 987bebedafe479949862d28f3e1f7d6e,
+        type: 3}
+    - target: {fileID: 1292462395786862187, guid: 4b36806a4853bcf4a9fc19c9f2c6bde2,
+        type: 3}
+      propertyPath: EnemySpacePosition
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 1292462395786862187, guid: 4b36806a4853bcf4a9fc19c9f2c6bde2,
         type: 3}
@@ -547,6 +632,11 @@ MonoBehaviour:
   pauseEvent: event:/UI/Pause_menu_popin
   unpauseEvent: event:/UI/Pause_menu_popout
   gameoverEvent: event:/UI/Game_over
+  hitEvent: 
+  jumpEvent: 
+  dieEvent: 
+  walkEvent: 
+  attackEvent: 
   comboResetEvent: event:/UI/Combo_lost
 --- !u!114 &1964317424
 MonoBehaviour:
@@ -590,7 +680,7 @@ PrefabInstance:
     - target: {fileID: 1292462395786862186, guid: 4b36806a4853bcf4a9fc19c9f2c6bde2,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 1292462395786862186, guid: 4b36806a4853bcf4a9fc19c9f2c6bde2,
         type: 3}
@@ -625,7 +715,7 @@ PrefabInstance:
     - target: {fileID: 1292462395786862186, guid: 4b36806a4853bcf4a9fc19c9f2c6bde2,
         type: 3}
       propertyPath: m_RootOrder
-      value: 5
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 1292462395786862186, guid: 4b36806a4853bcf4a9fc19c9f2c6bde2,
         type: 3}
