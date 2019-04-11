@@ -10,20 +10,28 @@ public class GameManager : MonoBehaviour
 
     public event GameEvent OnMenu;
     public event GameEvent OnPlay;
+    public event GameEvent OnPause;
+    public event GameEvent OnUnpause;
     public event GameEvent OnPlayerPlayed;
     public event GameEvent OnGameOver;
 
     public event ComboEvent OnComboIncreased;
     public event GameEvent OnCombotReseted;
-    private int ComboLevel = 0;
+    private int ComboLevel;
 
     [SerializeField]
-    private bool startOnPlay = false;
+    private bool startOnPlay;
 
     private void Awake()
     {
         Instance = this;
         DontDestroyOnLoad(gameObject);
+    }
+
+    private void Start()
+    {
+        if(!startOnPlay)
+            OnMenu?.Invoke();
     }
 
     private void Update()
@@ -41,6 +49,14 @@ public class GameManager : MonoBehaviour
         OnPlay?.Invoke();
     }
 
+    public void Pause(bool _pause)
+    {
+        if(_pause)
+            OnPause?.Invoke();
+        else
+            OnUnpause?.Invoke();
+    }
+
     public void Menu()
     {
         SceneManager.LoadScene(0);
@@ -56,12 +72,12 @@ public class GameManager : MonoBehaviour
     {
         Application.Quit();
     }
-    
+
     public void PlayerPlayed()
     {
         OnPlayerPlayed?.Invoke();
     }
-    
+
     public void ComboIncreased()
     {
         ComboLevel++;

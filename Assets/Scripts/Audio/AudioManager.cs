@@ -49,17 +49,23 @@ namespace Audio
         [EventRef]
         private string musicEvent = "";
 
-        private EventInstance eventInstance;
+        [SerializeField]
+        [EventRef]
+        private string ambianceEvent = "";
+
+        private EventInstance menuInstance;
+        private EventInstance musicInstance;
+        private EventInstance ambianceInstance;
 
         private int beat;
         private int offbeat;
-        private bool updateBeat = false;
+        private bool updateBeat;
 
         public void SetMusicVolume(float _volume)
         {
             MusicVolume = _volume;
-            if (eventInstance.isValid())
-                eventInstance.setVolume(_volume);
+            if (menuInstance.isValid())
+                menuInstance.setVolume(_volume);
         }
 
         public void SetFxVolume(float _volume) => FxVolume = _volume;
@@ -73,36 +79,71 @@ namespace Audio
         {
             GameManager.Instance.OnMenu += OnMenu;
             GameManager.Instance.OnPlay += OnPlay;
+            GameManager.Instance.OnPause += OnPause;
+            GameManager.Instance.OnUnpause += OnUnpause;
+            GameManager.Instance.OnComboIncreased += OnComboChange;
+            GameManager.Instance.OnCombotReseted += () => OnComboChange(0);
             GameManager.Instance.OnGameOver += () => updateBeat = false;
+        }
+
+        private void OnComboChange(int _combo)
+        {
+            musicInstance.setParameterValue("Main", _combo > 3 ? 3f : _combo + 1);
+        }
+
+        private void OnPause()
+        {
+            musicInstance.setPaused(true);
+            updateBeat = false;
+        }
+
+        private void OnUnpause()
+        {
+            musicInstance.setPaused(false);
+            updateBeat = true;
         }
 
         private void OnPlay()
         {
-            SetInstance(musicEvent);
+            menuInstance.stop(FMOD.Studio.STOP_MODE.ALLOWFADEOUT);
+
+            if (!musicInstance.isValid())
+                musicInstance = RuntimeManager.CreateInstance(musicEvent);
+
+            if (!ambianceInstance.isValid())
+                ambianceInstance = RuntimeManager.CreateInstance(ambianceEvent);
+
+            musicInstance.setParameterValue("Main", 1f);
+            ambianceInstance.setParameterValue("Main", 1f);
+
+            musicInstance.start();
+            ambianceInstance.start();
+
             updateBeat = true;
         }
 
         private void OnMenu()
         {
-            SetInstance(menuEvent);
+            musicInstance.stop(FMOD.Studio.STOP_MODE.ALLOWFADEOUT);
+            ambianceInstance.stop(FMOD.Studio.STOP_MODE.ALLOWFADEOUT);
+
+            if (!menuInstance.isValid())
+                menuInstance = RuntimeManager.CreateInstance(menuEvent);
+
+            menuInstance.start();
+
             updateBeat = false;
-        }
-
-        private void SetInstance(string _event)
-        {
-            if(eventInstance.isValid())
-                eventInstance.release();
-
-            eventInstance = RuntimeManager.CreateInstance(_event);
-            eventInstance.start();
         }
 
         private void Update()
         {
-            if (!updateBeat)
-                return;
+            if (updateBeat)
+                UpdateBeat();
+        }
 
-            eventInstance.getTimelinePosition(out int position);
+        private void UpdateBeat()
+        {
+            musicInstance.getTimelinePosition(out int position);
             float time = position / 1000f;
             float total_beat = time / (60f / Bpm);
             Beat = (int)total_beat % BeatCount + 1;
