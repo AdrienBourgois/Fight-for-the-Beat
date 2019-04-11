@@ -270,6 +270,11 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 4000280466998921641, guid: 6f11899a70ee2f140a6c0aec8e4ee422,
         type: 3}
+    - target: {fileID: 1292462395786862187, guid: 4b36806a4853bcf4a9fc19c9f2c6bde2,
+        type: 3}
+      propertyPath: EnemySpaceSize
+      value: 2
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4b36806a4853bcf4a9fc19c9f2c6bde2, type: 3}
 --- !u!1001 &767476605
