@@ -194,6 +194,75 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1001 &587855288
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 1943621299190879605, guid: 987bebedafe479949862d28f3e1f7d6e,
+        type: 3}
+      propertyPath: m_Name
+      value: EnemyClownFlower
+      objectReference: {fileID: 0}
+    - target: {fileID: 1943621299190879592, guid: 987bebedafe479949862d28f3e1f7d6e,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1943621299190879592, guid: 987bebedafe479949862d28f3e1f7d6e,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1943621299190879592, guid: 987bebedafe479949862d28f3e1f7d6e,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1943621299190879592, guid: 987bebedafe479949862d28f3e1f7d6e,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1943621299190879592, guid: 987bebedafe479949862d28f3e1f7d6e,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1943621299190879592, guid: 987bebedafe479949862d28f3e1f7d6e,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1943621299190879592, guid: 987bebedafe479949862d28f3e1f7d6e,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1943621299190879592, guid: 987bebedafe479949862d28f3e1f7d6e,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 1943621299190879592, guid: 987bebedafe479949862d28f3e1f7d6e,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1943621299190879592, guid: 987bebedafe479949862d28f3e1f7d6e,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1943621299190879592, guid: 987bebedafe479949862d28f3e1f7d6e,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 987bebedafe479949862d28f3e1f7d6e, type: 3}
 --- !u!114 &694889638 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 4731201341740368542, guid: 1a570678ca21e11488615728ba18b99f,
@@ -733,6 +802,15 @@ MonoBehaviour:
   walkEvent: 
   attackEvent: 
   comboResetEvent: event:/UI/Combo_lost
+  flowerAttackEvent: 
+  flowerFootstepEvent: 
+  flowerPrepaEvent: 
+  fouetAttack: 
+  fouetJump: 
+  hatAttackEvent: 
+  hatPrepaEvent: 
+  puppetAttackEvent: 
+  puppetPrepaEvent: 
 --- !u!114 &1964317424
 MonoBehaviour:
   m_ObjectHideFlags: 0
