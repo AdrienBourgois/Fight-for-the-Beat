@@ -38,11 +38,12 @@ MonoBehaviour:
   - {fileID: 114466637204750046}
   - {fileID: 114179916664453496}
   - {fileID: 114914309554080498}
+  - {fileID: 114293172181787168}
   MasterBanks:
   - {fileID: 114750159281577964}
   StringsBanks:
   - {fileID: 114758848808812508}
-  stringsBankWriteTime: 636906060926106445
+  stringsBankWriteTime: 636906628027581405
   cacheVersion: 3
 --- !u!114 &114009503882205070
 MonoBehaviour:
@@ -318,7 +319,7 @@ MonoBehaviour:
   Parameters: []
   MinDistance: 0
   MaxDistance: 0
-  Length: 5944
+  Length: 5860
 --- !u!114 &114206323888054216
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -384,6 +385,29 @@ MonoBehaviour:
   MinDistance: 0
   MaxDistance: 0
   Length: 669
+--- !u!114 &114293172181787168
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Path: event:/UI/Game_victory
+  guid: 8ad4f18949a87b479009a1fdb5865cf5
+  Banks:
+  - {fileID: 114750159281577964}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 7346
 --- !u!114 &114301480847311946
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -536,7 +560,7 @@ MonoBehaviour:
   Is3D: 0
   IsOneShot: 0
   Parameters:
-  - {fileID: 114373328379246670}
+  - {fileID: 114636863845713208}
   MinDistance: 0
   MaxDistance: 0
   Length: 74219
@@ -761,7 +785,7 @@ MonoBehaviour:
   Is3D: 0
   IsOneShot: 0
   Parameters:
-  - {fileID: 114836516324569090}
+  - {fileID: 114706517643148016}
   MinDistance: 0
   MaxDistance: 0
   Length: 68667
@@ -937,6 +961,22 @@ MonoBehaviour:
   MinDistance: 0
   MaxDistance: 0
   Length: 60024
+--- !u!114 &114636863845713208
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Name: Main
+  Min: 0
+  Max: 3
+  Default: 0
 --- !u!114 &114655426985571792
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -993,6 +1033,22 @@ MonoBehaviour:
   Max: 3
   Default: 0
 --- !u!114 &114688858701876804
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Name: Main
+  Min: 0
+  Max: 3
+  Default: 0
+--- !u!114 &114706517643148016
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1068,11 +1124,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Path: C:\Users\Adrien\Documents\Projects\Fight for the Beat\Assets\FmodBanks\Master
     Bank.bank
-  lastModified: 636906060926066519
+  lastModified: 636906628027541560
   LoadResult: 0
   FileSizes:
   - Name: 
-    Value: 17816320
+    Value: 18024832
   Exists: 1
 --- !u!114 &114751274446227162
 MonoBehaviour:
@@ -1106,11 +1162,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Path: Assets\FmodBanks\Master Bank.strings.bank
-  lastModified: 636906060926106445
+  lastModified: 636906628027581405
   LoadResult: 0
   FileSizes:
   - Name: 
-    Value: 1786
+    Value: 1836
   Exists: 1
 --- !u!114 &114760452995180814
 MonoBehaviour:
