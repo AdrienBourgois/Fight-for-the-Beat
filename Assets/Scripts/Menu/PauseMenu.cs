@@ -32,12 +32,12 @@ namespace Menu
 
         private void OnWin()
         {
-            winPanel.SetActive(false);
+            winPanel.SetActive(true);
         }
 
         private void OnGameOver()
         {
-            gameoverPanel.SetActive(false);
+            gameoverPanel.SetActive(true);
         }
 
         private void OnUnpause()
@@ -60,6 +60,7 @@ namespace Menu
         {
             GameManager.Instance.Menu();
             AudioManager.Instance.PlayButtonEvent();
+            Time.timeScale = 1f;
         }
     }
 }

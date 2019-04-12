@@ -23,7 +23,7 @@ public class GameManager : MonoBehaviour
     [SerializeField]
     private bool startOnPlay;
 
-    private bool onGame;
+    public bool OnGame { get; private set; }
 
     private void Awake()
     {
@@ -56,7 +56,7 @@ public class GameManager : MonoBehaviour
     {
         SceneManager.LoadScene(1);
         OnPlay?.Invoke();
-        onGame = true;
+        OnGame = true;
     }
 
     public void Pause(bool _pause)
@@ -65,24 +65,26 @@ public class GameManager : MonoBehaviour
             OnPause?.Invoke();
         else
             OnUnpause?.Invoke();
+
+        Time.timeScale = _pause ? 0f : 1f;
     }
 
     public void Menu()
     {
-        onGame = false;
+        OnGame = false;
         SceneManager.LoadScene(0);
         OnMenu?.Invoke();
     }
 
     public void GameOver()
     {
-        onGame = false;
+        OnGame = false;
         OnGameOver?.Invoke();
     }
 
     public void Win()
     {
-        onGame = false;
+        OnGame = false;
         OnWin?.Invoke();
     }
 

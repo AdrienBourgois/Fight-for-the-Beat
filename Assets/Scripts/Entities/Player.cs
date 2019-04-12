@@ -29,9 +29,32 @@ namespace Entities
 
             GameInputs.InputManager.Instance.OnKeyPressed += Controll;
 
-            //GameInputs.InputManager.Instance.OnNoKeyPressed += () => { LaunchSequence(Idle); ExecuteSequence(); GameManager.Instance.CombotReseted();; };
+            GameInputs.InputManager.Instance.OnNoKeyPressed += OnNoKeyPressed;
             GameManager.Instance.OnComboIncreased += ChangeAnimatorLayer;
-            GameManager.Instance.OnCombotReseted += () => { ChangeAnimatorLayer(0); };
+            GameManager.Instance.OnCombotReseted += OnCombotReseted;
+        }
+
+        protected override void OnDestroy()
+        {
+            base.OnDestroy();
+
+            GameInputs.InputManager.Instance.OnKeyPressed -= Controll;
+
+            GameInputs.InputManager.Instance.OnNoKeyPressed -= OnNoKeyPressed;
+            GameManager.Instance.OnComboIncreased -= ChangeAnimatorLayer;
+            GameManager.Instance.OnCombotReseted -= OnCombotReseted;
+        }
+
+        private void OnNoKeyPressed()
+        {
+            LaunchSequence(Idle);
+            ExecuteSequence();
+            GameManager.Instance.CombotReseted();
+        }
+
+        private void OnCombotReseted()
+        {
+            ChangeAnimatorLayer(0);
         }
 
         void Controll(GameInputs.InputManager.Keys key)
@@ -105,6 +128,8 @@ namespace Entities
             gameObject.SetActive(false);
 
             HealBar.sprite = SpritesHealBar[life];
+
+            GameManager.Instance.GameOver();
         }
 
         void ChangeLayer()

@@ -96,6 +96,38 @@ namespace Audio
         [EventRef]
         private string comboResetEvent = "";
 
+        [Header("Ennemies Sounds")]
+        [SerializeField]
+        [EventRef]
+        private string flowerAttackEvent = "";
+        [SerializeField]
+        [EventRef]
+        private string flowerFootstepEvent = "";
+        [SerializeField]
+        [EventRef]
+        private string flowerPrepaEvent = "";
+
+        [SerializeField]
+        [EventRef]
+        private string fouetAttack = "";
+        [SerializeField]
+        [EventRef]
+        private string fouetJump = "";
+
+        [SerializeField]
+        [EventRef]
+        private string hatAttackEvent = "";
+        [SerializeField]
+        [EventRef]
+        private string hatPrepaEvent = "";
+
+        [SerializeField]
+        [EventRef]
+        private string puppetAttackEvent = "";
+        [SerializeField]
+        [EventRef]
+        private string puppetPrepaEvent = "";
+
         private EventInstance menuInstance;
         private EventInstance musicInstance;
         private EventInstance ambianceInstance;
@@ -115,6 +147,12 @@ namespace Audio
 
         private void Awake()
         {
+            if (Instance)
+            {
+                Destroy(gameObject);
+                return;
+            }
+
             Instance = this;
         }
 
@@ -212,5 +250,15 @@ namespace Audio
         public void PlayJumpEvent() => PlayOneShot(jumpEvent);
         public void PlayAttackEvent() => PlayOneShot(attackEvent);
         public void PlayWalkEvent() => PlayOneShot(walkEvent);
+
+        public void PlayFlowerAttackEvent() => PlayOneShot(flowerAttackEvent);
+        public void PlayFlowerFootstepEvent() => PlayOneShot(flowerFootstepEvent);
+        public void PlayFlowerPrepaEvent() => PlayOneShot(flowerPrepaEvent);
+        public void PlayFouetAttack() => PlayOneShot(fouetAttack);
+        public void PlayFouetJump() => PlayOneShot(fouetJump);
+        public void PlayHatAttackEvent() => PlayOneShot(hatAttackEvent);
+        public void PlayHatPrepaEvent() => PlayOneShot(hatPrepaEvent);
+        public void PlayPuppetAttackEvent() => PlayOneShot(puppetAttackEvent);
+        public void PlayPuppetPrepaEvent() => PlayOneShot(puppetPrepaEvent);
     }
 }

@@ -943,7 +943,21 @@ MonoBehaviour:
   pauseEvent: event:/UI/Pause_menu_popin
   unpauseEvent: event:/UI/Pause_menu_popout
   gameoverEvent: event:/UI/Game_over
+  hitEvent: event:/Player/Hurt
+  jumpEvent: event:/Player/Jump
+  dieEvent: event:/Player/Dead
+  walkEvent: event:/Player/Walk
+  attackEvent: event:/Player/Attack
   comboResetEvent: event:/UI/Combo_lost
+  flowerAttackEvent: event:/Enemy/Flower/Attack
+  flowerFootstepEvent: event:/Enemy/Flower/Footstep
+  flowerPrepaEvent: event:/Enemy/Flower/Prepa
+  fouetAttack: event:/Enemy/Fouet/Attack
+  fouetJump: event:/Enemy/Fouet/Jump
+  hatAttackEvent: event:/Enemy/Hat/Attack
+  hatPrepaEvent: event:/Enemy/Hat/Prepa
+  puppetAttackEvent: event:/Enemy/Marionnette/Attack
+  puppetPrepaEvent: event:/Enemy/Marionnette/Prepa
 --- !u!4 &650010949
 Transform:
   m_ObjectHideFlags: 0
