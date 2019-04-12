@@ -35,11 +35,15 @@ namespace GameInputs
         private void Start()
         {
             AudioManager.Instance.OnOffbeat += OnOffbeat;
+            GameManager.Instance.OnMenu += () => hadBeginPlayed = false;
         }
 
         private void Update()
         {
-            if(Input.GetButtonDown("Left"))
+            if (!GameManager.Instance.OnGame)
+                return;
+
+            if (Input.GetButtonDown("Left"))
                 ProcessInput(Keys.Left);
             if (Input.GetButtonDown("Right"))
                 ProcessInput(Keys.Right);
@@ -48,7 +52,7 @@ namespace GameInputs
             if (Input.GetButtonDown("Down"))
                 ProcessInput(Keys.Down);
 
-            if(Input.GetKeyDown(KeyCode.Escape))
+            if (Input.GetKeyDown(KeyCode.Escape))
                 GameManager.Instance.Pause(true);
         }
 
