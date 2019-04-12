@@ -29,6 +29,12 @@ namespace GameInputs
 
         private void Awake()
         {
+            if (Instance)
+            {
+                Destroy(gameObject);
+                return;
+            }
+
             Instance = this;
         }
 
