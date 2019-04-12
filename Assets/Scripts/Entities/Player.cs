@@ -171,5 +171,13 @@ namespace Entities
             theScale.x *= -1;
             transform.localScale = theScale;
         }
+
+        protected override void OnMove(int _spaces)
+        {
+            base.OnMove(_spaces);
+
+            if(BeginSpaceIndex >= 80)
+                GameManager.Instance.Win();
+        }
     }
 }
