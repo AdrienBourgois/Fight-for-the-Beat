@@ -39,12 +39,8 @@ namespace Entities
                         }
                     }
                 }
-            }
-
-            Animator animator = collector.GetComponent<Animator>();
-            if (animator)
-            {
-                animator.SetTrigger(TrigerName);
+                
+                entity.animator.SetTrigger(TrigerName);
             }
         }
     }

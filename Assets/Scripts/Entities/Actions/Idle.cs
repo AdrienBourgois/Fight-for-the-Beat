@@ -9,7 +9,7 @@ namespace Entities
     {
         public override void Execute(GameObject collector)
         {
-            Entity entity = collector.GetComponent<Entity>();
+            Entity entity = collector.GetComponentInChildren<Entity>();
             if (entity)
             {
                 entity.Dodge = false;

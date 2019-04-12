@@ -13,12 +13,7 @@ namespace Entities
             if (entity)
             {
                 entity.Dodge = true;
-            }
-
-            Animator animator = collector.GetComponent<Animator>();
-            if (animator)
-            {
-                animator.SetTrigger("Dodge");
+                entity.animator.SetTrigger("Dodge");
             }
         }
     }

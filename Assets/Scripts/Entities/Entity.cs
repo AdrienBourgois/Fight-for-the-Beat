@@ -14,6 +14,8 @@ namespace Entities
         public bool IsOnSpace(int _index) => _index >= BeginSpaceIndex && _index <= EndSpaceIndex;
 
         public bool Dodge = false;
+        
+        public Animator animator;
 
         public void SetSpaceIndex(int _index, int _size = 1)
         {

@@ -16,8 +16,6 @@ namespace Entities
         private Sequence CurentSequence = null;
         private int CurentActionIndex;
 
-        private Animator animator;
-
         private bool m_FacingRight = true;
         private int NexLayer = 0;
         private int CurrentLayer = 0;
@@ -28,7 +26,6 @@ namespace Entities
         protected override void Start()
         {
             base.Start();
-            animator = GetComponent<Animator>();
 
             GameInputs.InputManager.Instance.OnKeyPressed += Controll;
 

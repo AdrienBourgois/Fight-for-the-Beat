@@ -351,7 +351,7 @@ PrefabInstance:
         type: 3}
       propertyPath: PrefabEntity
       value: 
-      objectReference: {fileID: 1943621299190879607, guid: 987bebedafe479949862d28f3e1f7d6e,
+      objectReference: {fileID: 4000280466998921641, guid: 6f11899a70ee2f140a6c0aec8e4ee422,
         type: 3}
     - target: {fileID: 1292462395786862187, guid: 4b36806a4853bcf4a9fc19c9f2c6bde2,
         type: 3}
@@ -362,6 +362,96 @@ PrefabInstance:
         type: 3}
       propertyPath: SpaceActivator
       value: 1
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 4b36806a4853bcf4a9fc19c9f2c6bde2, type: 3}
+--- !u!1001 &1179794173
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 1292462395786862184, guid: 4b36806a4853bcf4a9fc19c9f2c6bde2,
+        type: 3}
+      propertyPath: m_Name
+      value: Spawner Entity 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 1292462395786862184, guid: 4b36806a4853bcf4a9fc19c9f2c6bde2,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1292462395786862186, guid: 4b36806a4853bcf4a9fc19c9f2c6bde2,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 1292462395786862186, guid: 4b36806a4853bcf4a9fc19c9f2c6bde2,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1292462395786862186, guid: 4b36806a4853bcf4a9fc19c9f2c6bde2,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1292462395786862186, guid: 4b36806a4853bcf4a9fc19c9f2c6bde2,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1292462395786862186, guid: 4b36806a4853bcf4a9fc19c9f2c6bde2,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1292462395786862186, guid: 4b36806a4853bcf4a9fc19c9f2c6bde2,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1292462395786862186, guid: 4b36806a4853bcf4a9fc19c9f2c6bde2,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1292462395786862186, guid: 4b36806a4853bcf4a9fc19c9f2c6bde2,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 1292462395786862186, guid: 4b36806a4853bcf4a9fc19c9f2c6bde2,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1292462395786862186, guid: 4b36806a4853bcf4a9fc19c9f2c6bde2,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1292462395786862186, guid: 4b36806a4853bcf4a9fc19c9f2c6bde2,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1292462395786862187, guid: 4b36806a4853bcf4a9fc19c9f2c6bde2,
+        type: 3}
+      propertyPath: PrefabEntity
+      value: 
+      objectReference: {fileID: 5943874634032312449, guid: 22eb42ec76cc3234ba9a429cb0d2812a,
+        type: 3}
+    - target: {fileID: 1292462395786862187, guid: 4b36806a4853bcf4a9fc19c9f2c6bde2,
+        type: 3}
+      propertyPath: EnemySpacePosition
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 1292462395786862187, guid: 4b36806a4853bcf4a9fc19c9f2c6bde2,
+        type: 3}
+      propertyPath: SpaceActivator
+      value: 4
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4b36806a4853bcf4a9fc19c9f2c6bde2, type: 3}
@@ -376,6 +466,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Spawner Entity 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 1292462395786862184, guid: 4b36806a4853bcf4a9fc19c9f2c6bde2,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1292462395786862186, guid: 4b36806a4853bcf4a9fc19c9f2c6bde2,
         type: 3}
@@ -446,7 +541,7 @@ PrefabInstance:
     - target: {fileID: 1292462395786862187, guid: 4b36806a4853bcf4a9fc19c9f2c6bde2,
         type: 3}
       propertyPath: SpaceActivator
-      value: 1
+      value: 2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4b36806a4853bcf4a9fc19c9f2c6bde2, type: 3}
@@ -675,12 +770,17 @@ PrefabInstance:
     - target: {fileID: 1292462395786862184, guid: 4b36806a4853bcf4a9fc19c9f2c6bde2,
         type: 3}
       propertyPath: m_Name
-      value: Spawner Entity 10
+      value: Spawner Entity 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 1292462395786862184, guid: 4b36806a4853bcf4a9fc19c9f2c6bde2,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1292462395786862186, guid: 4b36806a4853bcf4a9fc19c9f2c6bde2,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 10
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 1292462395786862186, guid: 4b36806a4853bcf4a9fc19c9f2c6bde2,
         type: 3}
@@ -736,17 +836,17 @@ PrefabInstance:
         type: 3}
       propertyPath: PrefabEntity
       value: 
-      objectReference: {fileID: 4000280466998921641, guid: 6f11899a70ee2f140a6c0aec8e4ee422,
+      objectReference: {fileID: 6016378631400397264, guid: 773655cd803b8074cb999ed53611ad2d,
         type: 3}
     - target: {fileID: 1292462395786862187, guid: 4b36806a4853bcf4a9fc19c9f2c6bde2,
         type: 3}
       propertyPath: EnemySpacePosition
-      value: 10
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 1292462395786862187, guid: 4b36806a4853bcf4a9fc19c9f2c6bde2,
         type: 3}
       propertyPath: SpaceActivator
-      value: 6
+      value: 3
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4b36806a4853bcf4a9fc19c9f2c6bde2, type: 3}

@@ -18,12 +18,7 @@ namespace Entities
             {
                 entity.Dodge = false;
                 entity.Move(SpaceLenght);
-            }
-
-            Animator animator = collector.GetComponent<Animator>();
-            if (animator)
-            {
-                animator.SetTrigger("Move");
+                entity.animator.SetTrigger("Move");
             }
         }
     }

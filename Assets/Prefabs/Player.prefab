@@ -9,9 +9,9 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3699118488521537660}
-  - component: {fileID: 3699118488521537603}
   - component: {fileID: 3699118488521537661}
-  - component: {fileID: 3699118488521537663}
+  - component: {fileID: 8656736389442895217}
+  - component: {fileID: 1418007179963362337}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -34,7 +34,33 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!212 &3699118488521537603
+--- !u!114 &3699118488521537661
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3699118488521537602}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d92cc8e9c7ca75048b2f519a421a81e5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  life: 3
+  Dodge: 0
+  animator: {fileID: 1418007179963362337}
+  Idle: {fileID: 11400000, guid: 379c8f7b191e05d4b9c8efe379963bd2, type: 2}
+  MoveLeft: {fileID: 11400000, guid: 7aa802dfa2fa3f946902c8135c6a6be9, type: 2}
+  MoveRight: {fileID: 11400000, guid: ef48ae9c19fd7bc449c33b692055b0b3, type: 2}
+  Attack: {fileID: 11400000, guid: ef6c0b225d938e64792b3456a5ed3272, type: 2}
+  Jump: {fileID: 11400000, guid: afb384e58ff93864da9cb33e5f6c60e9, type: 2}
+  HealBar: {fileID: 0}
+  SpritesHealBar:
+  - {fileID: 21300000, guid: 2903c1b9b40abd5438a18c5adadb27bb, type: 3}
+  - {fileID: 21300000, guid: 0886b5df84c1cd04282f90d2854a9645, type: 3}
+  - {fileID: 21300000, guid: 1911d5291f834b341817400e79cf3bfe, type: 3}
+  - {fileID: 21300000, guid: 641efc9e3c1b04d469f2efb9248dae93, type: 3}
+--- !u!212 &8656736389442895217
 SpriteRenderer:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -82,32 +108,7 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &3699118488521537661
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3699118488521537602}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d92cc8e9c7ca75048b2f519a421a81e5, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  life: 3
-  Dodge: 0
-  Idle: {fileID: 11400000, guid: 379c8f7b191e05d4b9c8efe379963bd2, type: 2}
-  MoveLeft: {fileID: 11400000, guid: 7aa802dfa2fa3f946902c8135c6a6be9, type: 2}
-  MoveRight: {fileID: 11400000, guid: ef48ae9c19fd7bc449c33b692055b0b3, type: 2}
-  Attack: {fileID: 11400000, guid: ef6c0b225d938e64792b3456a5ed3272, type: 2}
-  Jump: {fileID: 11400000, guid: afb384e58ff93864da9cb33e5f6c60e9, type: 2}
-  HealBar: {fileID: 0}
-  SpritesHealBar:
-  - {fileID: 21300000, guid: 2903c1b9b40abd5438a18c5adadb27bb, type: 3}
-  - {fileID: 21300000, guid: 0886b5df84c1cd04282f90d2854a9645, type: 3}
-  - {fileID: 21300000, guid: 1911d5291f834b341817400e79cf3bfe, type: 3}
-  - {fileID: 21300000, guid: 641efc9e3c1b04d469f2efb9248dae93, type: 3}
---- !u!95 &3699118488521537663
+--- !u!95 &1418007179963362337
 Animator:
   serializedVersion: 3
   m_ObjectHideFlags: 0
@@ -150,7 +151,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8291397161729392467}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0.439, z: 0.1}
   m_LocalScale: {x: 0.26, y: 0.26, z: 1}
   m_Children: []

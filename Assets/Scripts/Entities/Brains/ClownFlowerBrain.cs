@@ -16,7 +16,7 @@ namespace Entities
                 Entity target2 = enemy.GetPreviousRelativeSpaceEntity(2);
                 Entity target3 = enemy.GetPreviousRelativeSpaceEntity(3);
 
-                if (target3 is Player && target2 is Player)
+                if ((target3 is Player || target2 is Player))
                 {
                     enemy.LaunchSequence(enemy.Attack[1]);
                 }
